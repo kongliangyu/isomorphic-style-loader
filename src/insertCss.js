@@ -92,10 +92,11 @@ function insertCss(styles, options) {
     }
 
     if (create) {
+      let head = document.head || document.getElementsByTagName('head')[0];
       if (prepend) {
-        document.head.insertBefore(elem, document.head.childNodes[0]);
+        head.insertBefore(elem, document.head.childNodes[0]);
       } else {
-        document.head.appendChild(elem);
+        head.appendChild(elem);
       }
     }
   }
